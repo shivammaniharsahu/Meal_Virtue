@@ -27,33 +27,7 @@
 </head>
 
 <body>
-  <header id="header" class="d-flex align-items-center">
-    <div class="container">
-      <div class="header-container d-flex align-items-center">
-        <div class="logo mr-auto">
-          <h1 class="text-light"><a href="landing.php"><span style="font-size: 26px;">Food Filler- Working for the unpreviliged</span></a></h1>
-        </div>
-
-        <nav class="nav-menu d-none d-lg-block">
-          <ul>
-          <li ><a href="landing.php">Home</a></li> 
-                <li ><a href="about-us.html">About</a></li>
-                <li><a href="donate.php">Donate leftovers from event</a></li>
-                <li  ><a href="ngoregister.php">Register Organisation</a></li>
-                <li class="active" ><a href="profile.php">Your Profile</a></li>
-                <li class="drop-down"><a href="">Testimonials</a>
-                  <ul>
-                    <li><a href="leaderboard.php">Our Leaderboard</a></li>
-                    <li><a href="testimonial.php">Listen from Users</a></li>
-                    <li><a href="thankyou.php">Thank you</a></li>
-                  </ul>
-                </li>
-                <li ><a href="contact.html">Contact US</a></li>
-          </ul>
-        </nav>
-      </div>
-    </div>
-  </header>
+   
 
   <section id="hero" class="d-flex align-items-center">
     <div class="container text-center position-relative" data-aos="fade-in" data-aos-delay="100">
