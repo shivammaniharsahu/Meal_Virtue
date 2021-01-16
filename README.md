@@ -14,22 +14,50 @@ We are currently working as a team Food-Filler and try to helping community so t
    * Link to donate food
    * Link for login to personal account
    * SAVIOUR STORIES
+   * Navbar containing Importent links to redirect to other pages.
 3. About Page
-   * Containing useful info of events and donations.
-4. DONATE LEFTOVERS FROM EVENT
-   * Now currently working on this pages.
+   * Containing what functionalities we are providing
+   * Number of events covered and donations.
+4. Profile Page
+   * One of the most functionality covered page.
+   * > Profile Page
+       >> * If user is login, redirect to profile page
+       >> * If not login redirect to login page
+       >> * If not registered yet, by clicking register button from login, redirect to register button.
+   * Containing all profile information like name, mail, dob,email, address, contact etc. 
+   * > Sidebar of profile page Conating 
+       >> * total food donated
+       >> * total money donated
+       >> * Donated Items.
+       >> * Earned total points for donated food
+   * > Containing maximum 3 recent activity performed by user/doner
+       >> * Date of donation
+       >> * On which event he had donated food/money
+       >> * Money donated
+       >> * Total points earned for particular donation.
+   * :grinning: Yeah! He can earn vouchers after a specific earned points which he can reedem on any nearby restaurants by clicking reedem button.    
+5. DONATE LEFTOVERS FROM EVENT
+   * This page is accessable only when user/doner is logged in.
+   * > Here user/doner can donate  
+       >> 1. Leftover food from any events or any food items.
+       >> 2. Donar can donate money directly to his selected NGO's.
+   * > After donate donar can will be redirected to profile page and he will find 
+       >> * List of all NGO's which are registered in his own city.
+       >> * Doner will select the NGO for his/her donated food, after select.
+       >>> * Donar will get notification to his registered mail that particular NGO will collect the food.
+       >>> * Select NGO will received notification for all the information of donar and donated items to receive donated items.
+       
+       
    * Here if user is login then he can directly donate food or money to his neareset choosed NGO's.
-5. REGISTER ORGANISATION
+6. REGISTER ORGANISATION
    * Here an NGO can register itself.
    * Working on this page
-6. Profile Page
-   * It's amazing, a lot of info based on realtime.
-   * Will be launch soon,Working on this page   
+  
 7. Our Leader Board
    * Working on this page  
 8. Listen from users
    * Pending
-9. Many more soon...   
+9. :arrow_forward::arrow_forward::arrow_forward:Many more soon...   
 
 ---
 
