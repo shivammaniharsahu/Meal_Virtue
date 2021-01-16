@@ -7,6 +7,10 @@ The website serves the functionality at two ends- at the end of the user, the us
 SERVICE TO MANKIND IS SERVICE TO GOD!!
 
 We are currently working as a team Food-Filler and try to helping community so that they can servive.
+
+## Screenshot of website
+
+![GitHub Logo](markdown-demo/home.png)
  
 
 ## Features
@@ -39,7 +43,9 @@ We are currently working as a team Food-Filler and try to helping community so t
        >> * On which event he had donated food/money
        >> * Money donated
        >> * Total points earned for particular donation.
-   * :grinning: Yeah! He can earn vouchers after a specific earned points which he can reedem on any nearby restaurants by clicking reedem button.    
+   * :grinning: Yeah! He can earn vouchers after a specific earned points which he can reedem on any nearby restaurants by clicking reedem button.   
+   
+   * ![GitHub Logo](markdown-demo/profile.png)   
 5. DONATE LEFTOVERS FROM EVENT
    * This page is accessable only when user/doner is logged in.
    * > Here user/doner can donate  
