@@ -1,13 +1,45 @@
+
+
+<?php
+if ($_SERVER['REQUEST_METHOD'] == 'POST'){
+     
+    $nm = $_POST["name"];
+    $em = $_POST["email"];
+    $sb = $_POST["subject"];
+    $me = $_POST["message"];
+      
+   
+      $servername = "localhost";
+      $username = "root";
+      $password = "";
+      $database = "registration";
+      $conn = mysqli_connect($servername, $username, $password, $database); 
+
+  
+      
+      $sql = "INSERT INTO `contactpage` (`name`, `email`, `subject`, `message`) 
+      VALUES ('$nm', '$em', '$sb', '$me')";
+      $t_result =  mysqli_query($conn, $sql);
+      
+ 
+      
+	 
+      header("Location: contact.php"); 
+     
+     
+	}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-  <title>Bethany Bootstrap Template - Index</title>
+  <title>Food-Filler: Working for the needy</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
+  
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
@@ -21,19 +53,19 @@
   <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="../assets/css/style.css" rel="stylesheet">
+  <link href="../assets/css/contact.css" rel="stylesheet">
 </head>
 <body>
   <header id="header" class="fixed-top d-flex align-items-center">
     <div class="container">
       <div class="header-container d-flex align-items-center">
         <div class="logo mr-auto">
-          <h1 class="text-light"><a href="landing.html"><span>Food Filler- Working for the unpreviliged</span></a></h1>
+          <a href="landing.php"><img src="../assets/img/logo1.png" style="height: 100px; width: 200px"></a>
         </div>
 
         <nav class="nav-menu d-none d-lg-block">
           <ul>
-                <li><a href="landing.html">Home</a></li> 
+                <li><a href="landing.php">Home</a></li> 
                 <li ><a href="about-us.html">About</a></li>
                 <li><a href="donate.php">Donate leftovers from event</a></li>
                 <li><a href="ngoregister.php">Register Organisation</a></li>
@@ -45,7 +77,7 @@
                     <li><a href="thankyou.php">Thank you</a></li>
                   </ul>
                 </li>
-                <li class="active"><a href="contact.html">Contact US</a></li>
+                <li class="active"><a href="contact.php">Contact US</a></li>
           </ul>
         </nav>
       </div>
@@ -95,7 +127,7 @@
                 </div>
               </div>
   
-              <form action="forms/contact.php" method="post" role="form" class="php-email-form mt-4">
+              <form method="post" action="contact.php">
                 <div class="form-row">
                   <div class="col-md-6 form-group">
                     <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
@@ -113,13 +145,8 @@
                 <div class="form-group">
                   <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
                   <div class="validate"></div>
-                </div>
-                <div class="mb-3">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
-                </div>
-                <div class="text-center"><button type="submit">Send Message</button></div>
+                </div> 
+                <div class="text-center"><button style="border:2px solid white;border-radius:20px;width:140px;height:40px;color:white; background-color:#006494;" type="submit">Send Message</button></div>
               </form>
             </div>
           </div>
@@ -147,7 +174,7 @@
               <div class="col-lg-4 col-md-6 footer-links">
                 <h4>Useful Links</h4>
                 <ul>
-                  <li><i class="bx bx-chevron-right"></i> <a href="landing.html">Home</a></li>
+                  <li><i class="bx bx-chevron-right"></i> <a href="landing.php">Home</a></li>
                   <li><i class="bx bx-chevron-right"></i> <a href="about-us.html">About us</a></li>
                   <li><i class="bx bx-chevron-right"></i> <a href="leaderboard.php">Leaderboard</a></li>
                   <li><i class="bx bx-chevron-right"></i> <a href="profile.php">See Profile</a></li>
@@ -183,3 +210,5 @@
     
     </body>
 </html>
+
+
