@@ -109,11 +109,11 @@ We are currently working as a team Food-Filler and try to helping community so t
      ```  
 *  Hurrey! 😎, Our project running on localhost  
 
-# Php MyAdmin
+## Php MyAdmin
 
 *  For the security issue we are not providing sql queries of Php Myadmin.
 
-# Backbones of project(Contributer)
+## Backbones of project(Contributer)
 
 >| S.No.         | Name                  | Work Field                                   | Github Account                            |
 >| ------------- |:---------------------:|:--------------------------------------------:|:-----------------------------------------:| 
@@ -121,6 +121,7 @@ We are currently working as a team Food-Filler and try to helping community so t
 >| 2             | Shashwat Awasthi      | Degine Website- Worked on FrontEnd           |  https://github.com/ShashwatAwasthi04     |
 >| 3             | Rahul Singh Kushawaha | Worked on frontend of project,database work  |  https://github.com/Rahul-skush           | 
 >| 4             | Ajay Kumar            | Connect project from backend, retrive queries|  https://github.com/AJAYKR00KJ            |
+
 ---
      
      
