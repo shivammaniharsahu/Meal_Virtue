@@ -1,3 +1,8 @@
+<?php 
+
+  session_start();
+  ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -33,8 +38,10 @@
         </div>
 
         <nav class="nav-menu d-none d-lg-block">
-          <ul>
-          <li ><a href="landing.php">Home</a></li> 
+            
+
+        <ul>
+          <li class="active"><a href="landing.php">Home</a></li> 
                 <li ><a href="about-us.html">About</a></li>
                 <li><a href="donate.php">Donate leftovers from event</a></li>
                 <li><a href="ngoregister.php">Register Organisation</a></li>
@@ -47,18 +54,23 @@
                   </ul>
                 </li>
                 <li ><a href="contact.php">Contact US</a></li>
+           
+            
           </ul>
+     
           <?php
 
-if (isset($_SESSION['email'])) {
-   echo"<div>
-   <button style='border:3px solid #000000;border-radius:8px;'><a href='profile.php?logout='1''><b  style='color:#006494;font-size:15px;'>Logout</b></a>  </button>
-       <img class='nav-avatar' style='height: 35px; width: 35px; -webkit-border-radius: 50%; -moz-border-radius: 50%; border-radius: 50%;'
-         src='https://bootdey.com/img/Content/avatar/avatar3.png'>
-           
-   </div>";
-};
-?>
+          if (isset($_SESSION['email'])) {
+             echo" <img href='profile.php'  class='nav-avatar' style='height: 40px; width: 40px; -webkit-border-radius: 50%; -moz-border-radius: 50%; border-radius: 50%;'
+             src='..\assets\img\prof.jpg'> 
+      <button style='border:3px solid #000000;border-radius:8px 0px 8px 0px;'><a href='profile.php?logout='1''><b  style='color:#006494;font-size:15px;'>Logout</b></a>  </button>
+        ";
+          };
+          ?>
+
+
+
+          
         </nav>
       </div>
     </div>

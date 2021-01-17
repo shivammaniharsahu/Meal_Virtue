@@ -6,13 +6,9 @@
   	header('location: login.php');
   }
   if (isset($_GET['logout'])) {
-
-    unset($_SESSION['email']);
-    unset($_SESSION['pincode']);
-    unset($_SESSION['id']);
   	session_destroy();
-    
-  	header("location: ../Front_end/landing.html");
+  	unset($_SESSION['email']);
+  	header("location: landing.php");
   }
 
 
@@ -20,6 +16,7 @@
 
 
 ?>
+
 <!-- --------------------------------------------------------------------------
   
 
@@ -68,7 +65,7 @@ it is profile.php
     <div class="container">
       <div class="header-container d-flex align-items-center">
         <div class="logo mr-auto">
-          <h1 class="text-light"><a href="landing.html"><span>Food Filler- Working for the unpreviliged</span></a></h1>
+          <a href="landing.php"><img src="../assets/img/logo1.png" style="height: 100px; width: 200px"></a>
         </div>
 
         <nav class="nav-menu d-none d-lg-block">
@@ -76,11 +73,11 @@ it is profile.php
          
 
           <ul>
-          <li ><a href="landing.html">Home</a></li> 
+          <li class="active"><a href="landing.php">Home</a></li> 
                 <li ><a href="about-us.html">About</a></li>
                 <li><a href="donate.php">Donate leftovers from event</a></li>
-                <li  ><a href="ngoregister.php">Register Organisation</a></li>
-                <li class="active" ><a href="profile.php">Your Profile</a></li>
+                <li><a href="ngoregister.php">Register Organisation</a></li>
+                <li><a href="profile.php">Your Profile</a></li>
                 <li class="drop-down"><a href="">Testimonials</a>
                   <ul>
                     <li><a href="leaderboard.php">Our Leaderboard</a></li>
@@ -88,18 +85,16 @@ it is profile.php
                     <li><a href="thankyou.php">Thank you</a></li>
                   </ul>
                 </li>
-                <li ><a href="contact.html">Contact US</a></li> 
-            <li><a href="profile.php?logout='1'"><b  style="color:blue;font-size:15px;">Logout</b></a></li>  
+                <li ><a href="contact.php">Contact US</a></li>
+           
             
           </ul>
-          <div>
-              <img class='nav-avatar' style="height: 35px; width: 35px; -webkit-border-radius: 50%; -moz-border-radius: 50%; border-radius: 50%;"
-                src="https://bootdey.com/img/Content/avatar/avatar3.png">
-                 
-          </div>
-          
-            
-          
+
+          <img href="profile.php"  class='nav-avatar' style="height: 40px; width: 40px; -webkit-border-radius: 50%; -moz-border-radius: 50%; border-radius: 50%;"
+                src="..\assets\img\prof.jpg"> 
+         <button style="border:3px solid #000000;border-radius:8px 0px 8px 0px;"><a href="profile.php?logout='1'"><b  style="color:#006494;font-size:15px;">Logout</b></a>  </button>
+           
+           
           
         </nav>
       </div>
@@ -272,8 +267,11 @@ it is profile.php
 	</style>
 
 
+<!-- POPup here -->
+
+
 <div id="popup00" class="owerlay" style="padding-top: 70px;text-align: center;overflow:scroll;">
-		    <div class="popup" style="font-size: 2em;font-weight:bold;background-image: url('games images/bg_10.jpg'); background-size: cover;">
+		    <div class="popup" style="font-size: 2em;font-weight:bold; background-size: cover;">
             <div style="text-align: center;color: black;font-size: 15px;"><b>Based on your location, nearby NGO's</b></div>
 		      <a class="closepopup" style="color: black;font-size: 1.5em;opacity: 1;font-style:calibri;" href="#">&times;</a>
               <p style="text-align: center;color: black;font-size: 15px;"><b>Select anyone to send your donated items/money</b></p>
@@ -300,7 +298,7 @@ $sql = "SELECT * FROM ngotable WHERE ngopin='$fetchpin' ORDER BY id DESC LIMIT 8
 $result =  mysqli_query($conn, $sql);
 
 $num = mysqli_num_rows($result);
-
+//$current_donated_item="";
 
 
 if($num)
@@ -310,11 +308,93 @@ if($num)
         
      
     echo '<div class="buttons">';
-      echo '<button><span style="font-weight:bold;"></span> '. $row['ngoname']. ' Mail:' . $row['ngoemail']. ' Contact:' . $row['ngocontact']. '</button>'; 
+
+    $sql_ngo_info = "SELECT * FROM ngotable WHERE ngopin='$fetchpin' ORDER BY id DESC LIMIT 1";
+    $ngo_info_result =  mysqli_query($conn, $sql_ngo_info);
+    $ngo_row = mysqli_fetch_assoc($ngo_info_result);
+
+    $ngo_name = $ngo_row['ngoname']; 
+    $ngo_mail = $ngo_row['ngoemail']; 
+    $ngo_contact = $ngo_row['ngocontact'];
+    $ngo_owner_mail = $ngo_row['owneremail'];
+    $ngo_owner_contact = $ngo_row['ownercontact'];
+    $ngo_address = $ngo_row['ngoaddress'];
+
+
+      $donarname = $_SESSION['firstname']." ".$_SESSION['lastname'];
+      $current_donated_item=$_SESSION['current_donated_item'];
+      $donar_email_add = $_SESSION['email'];
+      $donar_contact_no = $_SESSION['mobile'];
+      $donar_address = $_SESSION['address'];
+      $donar_pincode = $_SESSION['pincode'];
+      $donar_occupation = $_SESSION['occupation'];
+      
+     // '. $row['ngoname'].'
+      
+      echo '<a href="#"><button onclick="sendEmailtongo(); sendEmailtodoner(); done()"><span style="font-weight:bold;"> NGO-Name: '. $row['ngoname']. ', NGO-Mail:' . $row['ngoemail']. ', NGO-Contact:' . $row['ngocontact']. '</span></button></a>'; 
     echo '</div>'; 
   
   
     }
+
+    echo"
+            <script> 
+
+                function done()
+                {
+                  alert('Thanks for donating. Donation info send to you registered EMail. Your donated info also send to NGO selected by you. They will contact you soon!! Keep your food safe till then.');
+                } 
+                function sendEmailtongo(noname)
+                {
+                    console.log( noname );
+                    console.log('WER');
+                    var name='ajay';
+                    if (isNotEmpty(name))
+                        {
+                            $.ajax({
+                                    url: '../mailingservice/sendEmail.php',
+                                    method: 'POST',
+                                    dataType: 'json',
+                                    data: {
+                                        name: 'Food-Filler',
+                                        email: '$donar_email_add',   
+                                        subject: 'Pick food from DONAR $donarname',
+                                        body: 'Pickup items: $current_donated_item   Donar Location: $donar_address , Pin Code:$donar_pincode ,  Doner Name: $donarname,  Donar Contact: $donar_contact_no ,  Donar Occupation: $donar_occupation DONAR IS WAITING FOR YOU, PLEASE contact SOON FOR RECEIVING FOOD! . Regards: FoodFiller Team AJAY,SASHY,SHIVAM,RAHUL  '
+                                    }, success: function (response) {
+                                            
+                                    }
+                            });
+                        }
+                   
+                }
+
+
+                function sendEmailtodoner() { 
+                  var name='ajay';
+                  if (isNotEmpty(name)) {
+                      $.ajax({
+                         url: '../mailingservice/sendEmailtodoner.php',
+                         method: 'POST',
+                         dataType: 'json',
+                          data: {
+                            name: 'Food-Filler',
+                            email: '$ngo_mail',   
+                            subject: 'Your food will be picked up from $ngo_name',
+                            body: 'Donated items: $current_donated_item   Pickup Location: $donar_address  Pin Code:$donar_pincode , FOOD WILL BE PPICKED U FROM  NGO Name: $ngo_name,  NGO Contact: $ngo_contact NGO Owner Contact: $ngo_owner_contact NGO Owner Email: $ngo_owner_mail  NGO WILL CONTACT YOU SOON FOR RECEIVING FOOD! PLEASE SAVE YOUR FOOD TILL THEN. Regards: FoodFiller Team AJAY,SASHY,SHIVAM,RAHUL  '    
+                        }, success: function (response) {
+                                
+                        }
+                      });
+                  }
+              }
+
+                function isNotEmpty(caller) {
+                     
+                    return true;
+                }
+
+            </script>
+    ";
 
     
 } 
@@ -345,7 +425,7 @@ if($num)
           <div class="panel">
               <div class="user-heading round">
                   <a href="#">
-                      <img src="https://bootdey.com/img/Content/avatar/avatar3.png" alt="">
+                      <img src="..\assets\img\prof1.jpg" alt="">
                        
                       
                   </a>
@@ -522,9 +602,9 @@ if($num)
           <div class="col-lg-4 col-md-6 footer-links">
             <h4>Useful Links</h4>
             <ul>
-            <li><i class="bx bx-chevron-right"></i> <a href="landing.html">Home</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="landing.php">Home</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="about-us.html">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="leaderboard.php">Leaderboard</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Leaderboard</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="profile.php">See Profile</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Donate to US</a></li>
             </ul>

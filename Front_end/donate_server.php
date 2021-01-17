@@ -13,6 +13,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
  
  
     $email="";
+    $earned_points=0;
+    $firstname="";
+    $lastname="";
+    $address="";
+
+    //Added for mail
+    $current_donated_item="";
+
+    $points = $weight + $money + $plate;
+
+    if(empty($fooditem)) $fooditem= 'Rs. '. $money;
 
 
 
@@ -40,24 +51,27 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
  
       $email= $_SESSION['email'];
 
+      $total_points_earned = $_SESSION['earned_points'] + $points; 
 
 
+      $temp_name_t = $_SESSION['firstname']. ' ' .$_SESSION['lastname'];
+      $temp_city_t = $_SESSION['address'];
+   
+      //ADDED for mail
+      $_SESSION['current_donated_item']= $fooditem;
       
       
-
+    
 
       
-      $sql = "INSERT INTO `donate` (`event`, `fooditem`, `plate`, `weight`, `upi`, `money`, `email`) 
-      VALUES ('$event', '$fooditem', '$plate', '$weight', '$upi', '$money', '$email')";
+      $sql = "INSERT INTO `donate` (`event`, `fooditem`, `plate`, `weight`, `upi`, `money`, `email`, `pointsearned`, `overallpointearned`,`d_name`,`d_address`) 
+      VALUES ('$event', '$fooditem', '$plate', '$weight', '$upi', '$money', '$email', '$points', '$total_points_earned','$temp_name_t','$temp_city_t')";
       $result =  mysqli_query($conn, $sql);
       
-
-      // $_SESSION['total_money'] = 6000;
-      // $_SESSION['total_weight'] = 900;
+ 
       
 	 
-      header("Location: ../loginlogout/index.php#popup00");
-   // header("Location:fetchedngo.php#popup00");
+      header("Location: profile.php#popup00"); 
      
      
 	}

@@ -31,7 +31,7 @@
     <div class="container">
       <div class="header-container d-flex align-items-center">
         <div class="logo mr-auto">
-          <h1 class="text-light"><a href="landing.php"><span style="font-size: 26px;">Food Filler- Working for the unpreviliged</span></a></h1>
+        <a href="landing.php"><img src="../assets/img/logo1.png" style="height: 100px; width: 200px"></a>
         </div>
 
         <nav class="nav-menu d-none d-lg-block">
@@ -48,7 +48,7 @@
                     <li><a href="thankyou.php">Thank you</a></li>
                   </ul>
                 </li>
-                <li ><a href="contact.html">Contact US</a></li>
+                <li ><a href="contact.php">Contact US</a></li>
           </ul>
         </nav>
       </div>

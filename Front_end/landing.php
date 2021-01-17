@@ -1,3 +1,7 @@
+<?php
+  session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -29,25 +33,45 @@
     <div class="container">
       <div class="header-container d-flex align-items-center">
         <div class="logo mr-auto">
-          <h1 class="text-light"><a href="landing.html"><span>Food Filler- Working for the unpreviliged</span></a></h1>
+          <a href="landing.php"><img src="../assets/img/logo1.png" style="height: 100px; width: 200px"></a>
         </div>
 
         <nav class="nav-menu d-none d-lg-block">
-          <ul>
-            <li class="active"><a href="landing.html">Home</a></li>
-            <li><a href="about-us.html">About</a></li>
-            <li><a href="donate.php">Donate leftovers from event</a></li>
-            <li><a href="ngoregister.php">Register Organisation</a></li>
-            <li><a href="../loginlogout/index.php">Your Profile</a></li>
-            <li class="drop-down"><a href="">Testimonials</a>
-              <ul>
-                <li><a href="leaderboard.html">Our Leaderboard</a></li>
-                <li><a href="#">Listen from Users</a></li>
-                <li><a href="#">Thank you</a></li>
-              </ul>
-            </li>
-            <li><a href="contact.php">Contact US</a></li>
+         
+         
+
+        <ul>
+          <li class="active"><a href="landing.php">Home</a></li> 
+                <li ><a href="about-us.html">About</a></li>
+                <li><a href="donate.php">Donate leftovers from event</a></li>
+                <li><a href="ngoregister.php">Register Organisation</a></li>
+                <li><a href="profile.php">Your Profile</a></li>
+                <li class="drop-down"><a href="">Testimonials</a>
+                  <ul>
+                    <li><a href="leaderboard.php">Our Leaderboard</a></li>
+                    <li><a href="testimonial.php">Listen from Users</a></li>
+                    <li><a href="thankyou.php">Thank you</a></li>
+                  </ul>
+                </li>
+                <li ><a href="contact.php">Contact US</a></li>
+           
+            
           </ul>
+     
+          <?php
+
+          if (isset($_SESSION['email'])) {
+             echo" <img href='profile.php'  class='nav-avatar' style='height: 40px; width: 40px; -webkit-border-radius: 50%; -moz-border-radius: 50%; border-radius: 50%;'
+             src='..\assets\img\prof.jpg'> 
+      <button style='border:3px solid #000000;border-radius:8px 0px 8px 0px;'><a href='profile.php?logout='1''><b  style='color:#006494;font-size:15px;'>Logout</b></a>  </button>
+        ";
+          };
+          ?>
+
+
+
+          
+          
         </nav>
       </div>
     </div>
@@ -179,7 +203,7 @@
         <div class="text-center" data-aos="zoom-in">
           <h3>Have a lot of food leftovers?</h3>
           <p> Register yourself as a user and get benefits of redeeming the points earned by donating food</p>
-          <a class="cta-btn" href="../loginlogout/index.php">Register/Login</a>
+          <a class="cta-btn" href="profile.php">Register/Login</a>
         </div>
 
       </div>
@@ -189,70 +213,58 @@
     <section id="testimonials" class="testimonials section-bg">
       <div class="container">
 
+
+
+
+
         <div class="row">
-          <div class="col-lg-4">
-            <div class="section-title" data-aos="fade-right">
-              <h2>Saviour stories</h2>
+          <div class="col-lg-12">
+            <div class="section-title" data-aos="zoom-in-up">
+              <h2>What they say</h2>
               <p>Listen from people who have done their bit with us and have donated food for those who don't have access to it.</p>
             </div>
           </div>
-          <div class="col-lg-8" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-12" data-aos-delay="100">
             <div class="owl-carousel testimonials-carousel">
+ 
+            <?php
+                 
+                  
+                
+               
+                $servername = "localhost";
+                $username = "root";
+                $password = "";
+                $database = "registration";
+                $db = mysqli_connect($servername, $username, $password, $database);
+                  
+                $testimonial_query = "SELECT * FROM testimonial ORDER BY testimonial_id DESC LIMIT 5";
+                $testimonial_res = mysqli_query($db, $testimonial_query);
 
-              <div class="testimonial-item">
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  I loved theoir UI and the way they operate. The facility of having to only submit you address and details for donating food and getting all done is great.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-                <img src="../assets/img/testimonials/testimonials-1.jpeg" class="testimonial-img" alt="">
-                <h3>Pratik Chaudhary</h3>
-                <h4>Google Lover from Gujarat</h4>
-              </div>
+                $testimonial_num = mysqli_num_rows($testimonial_res);
 
-              <div class="testimonial-item">
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  The way they work is brilliant. I loved the way they provide me with redeem points for the food waste to be recycled. It helps serve two purpose at same time.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-                <img src="../assets/img/testimonials/testimonials-2.jpeg" class="testimonial-img" alt="">
-                <h3>Nitish Jatwar</h3>
-                <h4>Designer from Bilaspur</h4>
-              </div>
+                if($testimonial_num)
+                {
+                   while ($row = mysqli_fetch_assoc($testimonial_res)){
+                        
+                              echo '<div class="testimonial-item">';
+                              echo '<p>';
+                              echo '<i class="bx bxs-quote-alt-left quote-icon-left"></i>' .$row['testimonial_text']. '<i class="bx bxs-quote-alt-right quote-icon-right"></i>';
+                              echo '</p>';
+                              echo '<img src="../assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">';
+                              echo '<h3>Written By: ' .$row['name']. '</h3>';
+                              echo'<br>';
+                              echo '<h4>From: ' .$row['address']. '</h4>';
+                              echo'<br>';
+                              echo '<h4><b>Posted On : ' .$row['date']. '</b></h4>';
+                             
+                              echo '</div>';
 
-              <div class="testimonial-item">
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  It is really great for restaurant owners like us. We don't need to take care about the hassle for thinking how to donate, where to donate.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-                <img src="../assets/img/testimonials/testimonials-3.jpeg" class="testimonial-img" alt="">
-                <h3>Raju Sahu</h3>
-                <h4>Burger Zone owner from Raipur</h4>
-              </div>
+                   } 
+                }
+ 
+            ?> 
 
-              <div class="testimonial-item">
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Everyday I go to many weddings or events, and find so much food wasted their. But this helps them to work on their behalf for the mankind.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-                <img src="../assets/img/testimonials/testimonials-4.jpeg" class="testimonial-img" alt="">
-                <h3>Lokesh Patel</h3>
-                <h4>Builder from Madhya Pradesh</h4>
-              </div>
-
-              <div class="testimonial-item">
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Being a homemaker, I know how much food is wasted. This is a unique way, helps me easily dispose of some food, and also not waste it.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-                <img src="../assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
-                <h3>Nihal Tiwary</h3>
-                <h4>Homemaker from Raipur</h4>
-              </div>
 
             </div>
           </div>
@@ -283,11 +295,11 @@
           <div class="col-lg-4 col-md-6 footer-links">
             <h4>Useful Links</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="landing.php">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="about-us.html">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="leaderboard.php">Leaderboard</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="profile.php">See Profile</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Donate to US</a></li>
             </ul>
           </div>
           <div class="col-lg-4 col-md-6 footer-newsletter">
@@ -301,6 +313,17 @@
         </div>
       </div>
     </div>
+
+
+<!-- Chatbot -->
+<script SameSite="None; Secure" src="https://static.landbot.io/landbot-3/landbot-3.0.0.js"></script>
+<script>
+  var myLandbot = new Landbot.Livechat({
+    configUrl: 'https://chats.landbot.io/v3/H-799241-YZVHV9LUFDSKR4GC/index.json',
+  });
+</script>
+<!-- ChatbotEnd -->
+
 
 
   <!-- Vendor JS Files -->

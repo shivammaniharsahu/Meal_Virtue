@@ -4,14 +4,15 @@
   session_start();
   include "donate_server.php";  
 
+
   if (!isset($_SESSION['email'])) {
   	$_SESSION['msg'] = "You must log in first";
-  	header('location: ../loginlogout/login.php');
+  	header('location: login.php');
   }
   if (isset($_GET['logout'])) {
   	session_destroy();
   	unset($_SESSION['email']);
-  	header("location: ../Front_end/landing.html");
+  	header("location: landing.php");
   }
 ?> 
 
@@ -39,35 +40,47 @@
   <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-
   <link href="../assets/css/style.css" rel="stylesheet">
   <link href="../assets/css/donate.css" rel="stylesheet">
+  
   
 </head>
 
 <body>
-    <header id="header" class="d-flex align-items-center">
+    <header id="header" class="fixed-top d-flex align-items-center">
         <div class="container">
           <div class="header-container d-flex align-items-center">
             <div class="logo mr-auto">
-              <h1 class="text-light"><a href="landing.html"><span>Food Filler- Working for the unpreviliged</span></a></h1>
+              <a href="landing.php"><img src="../assets/img/logo1.png" style="height: 100px; width: 200px"></a>
             </div>
+    
             <nav class="nav-menu d-none d-lg-block">
-              <ul>
-                <li><a href="landing.html">Home</a></li>
-                <li><a href="about-us.html">About</a></li>
+             
+         
+
+          <ul>
+          <li class="active"><a href="landing.php">Home</a></li> 
+                <li ><a href="about-us.html">About</a></li>
                 <li><a href="donate.php">Donate leftovers from event</a></li>
-                <li class="active"><a href="ngoregister.php">Register Organisation</a></li>
-                <li><a href="../loginlogout/index.php">Your Profile</a></li>
+                <li><a href="ngoregister.php">Register Organisation</a></li>
+                <li><a href="profile.php">Your Profile</a></li>
                 <li class="drop-down"><a href="">Testimonials</a>
                   <ul>
-                    <li><a href="leaderboard.html">Our Leaderboard</a></li>
-                    <li><a href="#">Listen from Users</a></li>
-                    <li><a href="#">Thank you</a></li>
+                    <li><a href="leaderboard.php">Our Leaderboard</a></li>
+                    <li><a href="testimonial.php">Listen from Users</a></li>
+                    <li><a href="thankyou.php">Thank you</a></li>
                   </ul>
                 </li>
-                <li><a href="contact.php">Contact US</a></li>
-              </ul>
+                <li ><a href="contact.php">Contact US</a></li>
+           
+            
+          </ul>
+
+          <img href="profile.php"  class='nav-avatar' style="height: 40px; width: 40px; -webkit-border-radius: 50%; -moz-border-radius: 50%; border-radius: 50%;"
+                src="..\assets\img\prof.jpg"> 
+         <button style="border:3px solid #000000;border-radius:8px 0px 8px 0px;"><a href="profile.php?logout='1'"><b  style="color:#006494;font-size:15px;">Logout</b></a>  </button>
+           
+
             </nav>
           </div>
         </div>
@@ -76,9 +89,10 @@
 
 
 
-      <section id="hero" class="d-flex align-items-center" style="height:340px;">
-    <div class="container text-center position-relative" data-aos="fade-in" data-aos-delay="200"> 
-      <h2>We are dedicated towards that no one should sleep hungry</h2>
+      <section id="hero" class="d-flex align-items-center">
+    <div class="container text-center position-relative" data-aos="fade-in" data-aos-delay="200">
+      <h1>Want to do service to humanity</h1> 
+      <h2>Your donations can help someone to have a day's meal</h2>
       <a href="#sign-up" class="btn-get-started scrollto">Donate Now</a>
     </div>
   </section><!-- End Hero -->
@@ -182,7 +196,7 @@
   </div>
 </div>
  
-<script src="../assets/css/donate.js"></script>
+<script src="../assets/js/donate.js"></script>
 
 <!-- NGO Register Form end here -->
 
@@ -209,11 +223,11 @@
           <div class="col-lg-4 col-md-6 footer-links">
             <h4>Useful Links</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="landing.php">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="about-us.html">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="leaderboard.php">Leaderboard</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="profile.php">See Profile</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Donate to US</a></li>
             </ul>
           </div>
           <div class="col-lg-4 col-md-6 footer-newsletter">
