@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 15, 2021 at 05:24 PM
+-- Generation Time: Jan 17, 2021 at 05:03 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.2.34
 
@@ -20,6 +20,31 @@ SET time_zone = "+00:00";
 --
 -- Database: `registration`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `contactpage`
+--
+
+CREATE TABLE `contactpage` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `subject` varchar(255) NOT NULL,
+  `message` varchar(255) NOT NULL,
+  `date` date NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `contactpage`
+--
+
+INSERT INTO `contactpage` (`id`, `name`, `email`, `subject`, `message`, `date`) VALUES
+(1, 'ajay', 'abc@gmail.com', 'temp', 'message', '2021-01-19'),
+(2, 'hola', 'fg@gmail.com', 'subject', 'message', '2021-01-16'),
+(3, 'ajay', 'ajay@gmail.com', 'queries', 'message', '2021-01-16'),
+(4, 'abcder', 'abc@gmail.com', 'kjhadkaj', 'jhaskjlasa', '2021-01-16');
 
 -- --------------------------------------------------------
 
@@ -61,7 +86,26 @@ INSERT INTO `donate` (`event`, `fooditem`, `plate`, `weight`, `upi`, `money`, `i
 ('chay party', 'dal', 67, 89, '', 0, NULL, '2021-01-15', 'userajay89@gmail.com', 156, 91, 2686, 'nishan singh', 'user_address_here'),
 ('holi', 'Puri, sabji, halwa', 23, 24, '', 0, NULL, '2021-01-15', 'ajay@gmail.com', 47, 92, 47, 'Ajay Kumar', 'Ajay_kumar shivnagar'),
 ('', 'Rs. 250000', 0, 0, 'fake@oksbi', 250000, NULL, '2021-01-15', 'u@gmail.com', 250000, 93, 250000, 'f l', 'add'),
-('sadi', 'roti', 23, 45, '', 0, NULL, '2021-01-15', 'shivam@gmail.com', 68, 94, 68, 'shivam sahu', 'shivam_adress');
+('sadi', 'roti', 23, 45, '', 0, NULL, '2021-01-15', 'shivam@gmail.com', 68, 94, 68, 'shivam sahu', 'shivam_adress'),
+('', 'Rs. 70', 0, 0, '', 70, NULL, '2021-01-16', 'userajay89@gmail.com', 70, 95, 2968, 'nishan singh', 'user_address_here'),
+('diwali', 'mithai', 78, 45, '', 0, NULL, '2021-01-16', 'userajay89@gmail.com', 123, 96, 3021, 'nishan singh', 'user_address_here'),
+('', 'Rs. 89', 0, 0, '', 89, NULL, '2021-01-16', 'userajay89@gmail.com', 89, 97, 2987, 'nishan singh', 'user_address_here'),
+('new year', 'tofee', 67, 78, '', 0, NULL, '2021-01-16', 'userajay89@gmail.com', 145, 98, 3043, 'nishan singh', 'user_address_here'),
+('', 'Rs. 1', 0, 0, '', 1, NULL, '2021-01-16', 'userajay89@gmail.com', 1, 99, 3326, 'nishan singh', 'user_address_here'),
+('', 'Rs. 56', 0, 0, '', 56, NULL, '2021-01-16', 'userajay89@gmail.com', 56, 100, 3381, 'nishan singh', 'user_address_here'),
+('', 'Rs. 78', 0, 0, '', 78, NULL, '2021-01-16', 'userajay89@gmail.com', 78, 101, 3403, 'nishan singh', 'user_address_here'),
+('party at new year', 'chay', 20, 111, '', 0, NULL, '2021-01-16', 'k@gmail.com', 131, 102, 131, 'k k_l', 'k_address'),
+('', 'Rs. 1000202', 0, 0, 'fake@oksbi', 1000202, NULL, '2021-01-16', 'k@gmail.com', 1000202, 103, 1000333, 'k k_l', 'k_address'),
+('LANGAR', 'Chawal, roti, dal, karri', 20, 50, '', 0, NULL, '2021-01-16', 'k@gmail.com', 70, 104, 201, 'k k_l', 'k_address'),
+('', 'Rs. 67', 0, 0, '', 67, NULL, '2021-01-16', 'k@gmail.com', 67, 105, 1000470, 'k k_l', 'k_address'),
+('', 'Rs. 67', 0, 0, '', 67, NULL, '2021-01-16', 'k@gmail.com', 67, 106, 1000470, 'k k_l', 'k_address'),
+('', 'Rs. 30', 0, 0, '', 30, NULL, '2021-01-17', 'k@gmail.com', 30, 107, 1000567, 'k k_l', 'k_address'),
+('', 'Rs. 70', 0, 0, '', 70, NULL, '2021-01-17', 'k@gmail.com', 70, 108, 1000607, 'k k_l', 'k_address'),
+('', 'Rs. 50', 0, 0, '', 50, NULL, '2021-01-17', 'k@gmail.com', 50, 109, 1000687, 'k k_l', 'k_address'),
+('', 'Rs. 5000', 0, 0, '', 5000, NULL, '2021-01-17', 'k@gmail.com', 5000, 110, 1005687, 'k k_l', 'k_address'),
+('', 'Rs. 70', 0, 0, '', 70, NULL, '2021-01-17', 'k@gmail.com', 70, 111, 1005757, 'k k_l', 'k_address'),
+('pARTY', 'WATER', 23, 45, '', 0, NULL, '2021-01-17', 'k@gmail.com', 68, 112, 1005825, 'k k_l', 'k_address'),
+('', 'Rs. 500', 0, 0, 'rt@fakesbi', 500, NULL, '2021-01-17', 'userajay89@gmail.com', 500, 113, 3960, 'nishan singh', 'user_address_here');
 
 -- --------------------------------------------------------
 
@@ -108,7 +152,9 @@ INSERT INTO `ngotable` (`id`, `ownerfirstname`, `ownerlastname`, `owneremail`, `
 (67, 'Daily', 'Singh', 'daily@gmail.com', '123456', 'Daily@ngo', '65426267', 'daily@ngogmail.com', 'daily_address', 'Raipur', '492001', '', 'bkhjdhw987yw', 1, '2021-01-14'),
 (68, 'abc', 'jkl', 'abc@gmail.com', '1234567890', 'abc_ngo', '1232123432', 'abc_ngo@gmail.com', 'abc_ngo_address', 'abc_ngo_city', '12345', '', 'abc_ngo_id', 1, '2021-01-14'),
 (69, 'xdv', 'sdfs', 'sdfs@gmail', 'sfsdf', 'dsf', 'sdfssfs', 'jd@gmail', 'sdsf', 'dhd', '454635', '', 'cbcv', 1, '2021-01-15'),
-(70, 'first', 'last', 'email@gmail.com', '1234567892', 'ngo_name', '1234567890', 'ngo@gmail.com', 'ngo_address', 'allahabad', '211008', '', 'NGO_ID123', 1, '2021-01-15');
+(70, 'first', 'last', 'email@gmail.com', '1234567892', 'ngo_name', '1234567890', 'ngo@gmail.com', 'ngo_address', 'allahabad', '211008', '', 'NGO_ID123', 1, '2021-01-15'),
+(71, 'gyuyu', 'ggi', 'uiiu@g', 'gj6997', 'kk', 'jhioj', 'yy89yhu@jhj', 'kjj', 'jkho', 'uui9@jk', '', 'uyo89', 1, '2021-01-16'),
+(72, 'asdf', 'jklm', 'emailowner@gmail.com', 'contact12345', 'ngo_name_asdf', '12345', 'hiban5538@gmail.com', 'ngo_address_here', 'Raipur', '492001', '', 'NGO_ID', 1, '2021-01-16');
 
 -- --------------------------------------------------------
 
@@ -129,26 +175,12 @@ CREATE TABLE `testimonial` (
 --
 
 INSERT INTO `testimonial` (`testimonial_id`, `name`, `address`, `date`, `testimonial_text`) VALUES
-(150, 'kj_first kj_last', 'kj_address', '2021-01-14', 'ajay'),
-(151, 'kj_first kj_last', 'kj_address', '2021-01-14', 'ajay'),
-(171, 'kj_first kj_last', 'kj_address', '2021-01-14', 'hfghgf'),
-(184, 'aj  kumar', 'aj_address_mzp', '2021-01-15', 'Hurrey!! Now working fine!\r\nMove on another feature.'),
-(188, 'aj  kumar', 'aj_address_mzp', '2021-01-15', 'Ja bhai, ho gya fix'),
-(189, 'aj  kumar', 'aj_address_mzp', '2021-01-15', 'Abhi gya nhi!!!!!!!!!!!!!!\r\n Ja'),
-(190, 'aj  kumar', 'aj_address_mzp', '2021-01-15', 'hurrey, thanks'),
-(191, 'nishan singh', 'n@gmail.com', '2021-01-15', 'Donated 2000 rupye'),
-(192, 'nishan singh', 'n@gmail.com', '2021-01-15', 'Wow'),
-(193, 'nishan singh', 'n@gmail.com', '2021-01-15', 'Final, done'),
-(194, 'kj_first kj_last', 'kj_address', '2021-01-15', 'Well done'),
-(195, 'kj_first kj_last', 'kj_address', '2021-01-15', 'Smile :)'),
-(196, 'ssfdvs sdfs', 'ghsdt', '2021-01-15', 'done'),
-(197, 'f l', 'add', '2021-01-15', ''),
-(198, 'f l', 'add', '2021-01-15', ''),
-(199, 'f l', 'add', '2021-01-15', 'hellooo'),
-(200, 'nishan singh', 'user_address_here', '2021-01-15', 'Nice'),
-(201, 'nishan singh', 'user_address_here', '2021-01-15', 'Good'),
-(202, 'shivam sahu', 'shivam_adress', '2021-01-15', 'Shivam is awesome and living with her'),
-(203, 'nishan singh', 'user_address_here', '2021-01-15', 'Done');
+(206, 'k k_l', 'k_address', '2021-01-16', 'Nice, awesome plateform'),
+(207, 'k k_l', 'k_address', '2021-01-16', 'Want more features'),
+(208, 'k k_l', 'k_address', '2021-01-16', 'jkkj'),
+(209, 'k k_l', 'k_address', '2021-01-16', 'hello fine'),
+(210, 'k k_l', 'k_address', '2021-01-17', 'Wow'),
+(211, 'kj_first kj_last', 'kj_address', '2021-01-17', 'Wow, its a amazing plateform and easy to use. We can donate our food easily, great things.');
 
 -- --------------------------------------------------------
 
@@ -181,11 +213,20 @@ INSERT INTO `users` (`id`, `firstname`, `lastname`, `email`, `mobile`, `dob`, `o
 (16, 'nishan', 'singh', 'userajay89@gmail.com', '7492789349', '2021-01-13', 'nishanoccupation', 'user_address_here', 123456, '7b8b965ad4bca0e41ab51de7b31363a1', ''),
 (17, 'aj ', 'kumar', 'aj@gmail.com', '769768658787', '2021-01-14', 'student', 'aj_address_mzp', 123456, '3b6f421e7550395e28e091c5565ac80a', ''),
 (18, 'ssfdvs', 'sdfs', 'n@gmail.com', '453464564634', '2021-01-15', 'wrwer', 'ghsdt', 454635, '7b8b965ad4bca0e41ab51de7b31363a1', ''),
-(19, 'Ajay', 'Kumar', 'ajay@gmail.com', '1234567897', '2021-01-15', 'Student', 'Ajay_kumar shivnagar', 211008, '29e457082db729fa1059d4294ede3909', '');
+(19, 'Ajay', 'Kumar', 'ajay@gmail.com', '1234567897', '2021-01-15', 'Student', 'Ajay_kumar shivnagar', 211008, '29e457082db729fa1059d4294ede3909', ''),
+(20, 'hfjg', 'hjkj', 'gfg@ffhg', '876879897788', '2021-01-16', 'jgkj', 'uyfuyu', 786789, '7694f4a66316e53c8cdd9d9954bd611d', ''),
+(21, 'k', 'k_l', 'k@gmail.com', '678798775454', '2021-01-16', 'k_occup', 'k_address', 492001, '8ce4b16b22b58894aa86c421e8759df3', ''),
+(22, 'Raju', 'Sahu', 'raju@gmail.com', '6848759808 ', '2021-01-16', 'Raju_occupation', 'Raju_address', 863456, '03c017f682085142f3b60f56673e22dc', '');
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `contactpage`
+--
+ALTER TABLE `contactpage`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `donate`
@@ -217,28 +258,34 @@ ALTER TABLE `users`
 --
 
 --
+-- AUTO_INCREMENT for table `contactpage`
+--
+ALTER TABLE `contactpage`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
 -- AUTO_INCREMENT for table `donate`
 --
 ALTER TABLE `donate`
-  MODIFY `uniqueid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=95;
+  MODIFY `uniqueid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=114;
 
 --
 -- AUTO_INCREMENT for table `ngotable`
 --
 ALTER TABLE `ngotable`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=71;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=73;
 
 --
 -- AUTO_INCREMENT for table `testimonial`
 --
 ALTER TABLE `testimonial`
-  MODIFY `testimonial_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=204;
+  MODIFY `testimonial_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=212;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(250) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` int(250) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- Constraints for dumped tables
