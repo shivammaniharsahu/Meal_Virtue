@@ -27,7 +27,33 @@
 </head>
 
 <body>
-   
+  <header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container">
+      <div class="header-container d-flex align-items-center">
+        <div class="logo mr-auto">
+        <a href="landing.php"><img src="../assets/img/logo1.png" style="height: 100px; width: 200px"></a>
+        </div>
+
+        <nav class="nav-menu d-none d-lg-block">
+          <ul>
+          <li ><a href="landing.php">Home</a></li> 
+                <li ><a href="about-us.html">About</a></li>
+                <li><a href="donate.php">Donate leftovers from event</a></li>
+                <li  ><a href="ngoregister.php">Register Organisation</a></li>
+                <li class="active" ><a href="profile.php">Your Profile</a></li>
+                <li class="drop-down"><a href="">Testimonials</a>
+                  <ul>
+                    <li><a href="leaderboard.php">Our Leaderboard</a></li>
+                    <li><a href="testimonial.php">Listen from Users</a></li>
+                    <li><a href="thankyou.php">Thank you</a></li>
+                  </ul>
+                </li>
+                <li ><a href="contact.php">Contact US</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
 
   <section id="hero" class="d-flex align-items-center">
     <div class="container text-center position-relative" data-aos="fade-in" data-aos-delay="100">
@@ -55,7 +81,7 @@
 
            <div class="col-lg-6 col-md-6 footer-contact"> 
            <div>
-               <label><span style="color:#EE6C4D;">*</span>Firstname</label>
+               <label><span style="color:#006494;">*</span>Firstname</label>
                <input type="text" name="firstname" placeholder="Enter your first name" value="<?php echo $firstname; ?>">
            </div>
            </div> 
@@ -63,7 +89,7 @@
 
            <div class="col-lg-6 col-md-6 footer-contact">
            <div>
-               <label><span style="color:#EE6C4D;">*</span>Lastname</label>
+               <label><span style="color:#006494;">*</span>Lastname</label>
                <input type="text" name="lastname" placeholder="Enter Last name" value="<?php echo $lastname; ?>">
            </div>
            </div>
@@ -71,21 +97,21 @@
 
            <div class="col-lg-6 col-md-6 footer-contact"> 
            <div>
-               <label><span style="color:#EE6C4D;">*</span>Email</label>
+               <label><span style="color:#006494;">*</span>Email</label>
                <input type="text" name="email" placeholder="abc@gmail.com" value="<?php echo $email; ?>">
            </div>
            </div>
 
            <div class="col-lg-6 col-md-6 footer-contact">
            <div>
-               <label><span style="color:#EE6C4D;">*</span>Mobile</label>
+               <label><span style="color:#006494;">*</span>Mobile</label>
                <input type="tel" name="mobile" placeholder="888 888 8888" maxlength="12"  title="Ten digits code" required value="<?php echo $mobile; ?>">
            </div>
            </div>
 
            <div class="col-lg-6 col-md-6 footer-contact">
            <div>
-               <label><span style="color:#EE6C4D;">*</span>Birthday</label>
+               <label><span style="color:#006494;">*</span>Birthday</label>
                <input type="date" name="dob" placeholder="20-10-2020" value="<?php echo $dob; ?>" >
            </div>
            </div>
@@ -99,28 +125,28 @@
 
            <div class="col-lg-6 col-md-6 footer-contact">
            <div>
-               <label><span style="color:#EE6C4D;">*</span>Full Address</label>
+               <label><span style="color:#006494;">*</span>Full Address</label>
                <input type="text" name="address" placeholder="Raipur" value="<?php echo $address; ?>">
            </div>
            </div>
 
            <div class="col-lg-6 col-md-6 footer-contact">
            <div>
-               <label><span style="color:#EE6C4D;">*</span>Pincode</label>
+               <label><span style="color:#006494;">*</span>Pincode</label>
                <input type="text" name="pincode"  maxlength="6" placeholder="123456" value="<?php echo $pincode; ?>" >
            </div>
            </div>
 
            <div class="col-lg-6 col-md-6 footer-contact">
            <div>
-               <label><span style="color:#EE6C4D;">*</span>Password</label>
+               <label><span style="color:#006494;">*</span>Password</label>
                <input type="password" name="password_1" placeholder="Enter your password here" >
            </div>
            </div>
 
            <div class="col-lg-6 col-md-6 footer-contact">
            <div>
-               <label><span style="color:#EE6C4D;">*</span>Confirm Password</label>
+               <label><span style="color:#006494;">*</span>Confirm Password</label>
                <input type="password" name="password_2" placeholder="Confirm password here" >
            </div>
            </div>
@@ -134,7 +160,7 @@
 
            <div class="col-lg-6 col-md-6 footer-contact">
            <div>
-           <span style="color:#EE6C4D;">*</span>Required all fields
+           <span style="color:#006494;">*</span>Required all fields
            </div>
            </div>
            
