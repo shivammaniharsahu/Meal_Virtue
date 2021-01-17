@@ -1,5 +1,25 @@
- 
+<?php 
+  session_start(); 
 
+  if (!isset($_SESSION['email'])) {
+  	$_SESSION['msg'] = "You must log in first";
+  	header('location: login.php');
+  }
+  if (isset($_GET['logout'])) {
+
+    unset($_SESSION['email']);
+    unset($_SESSION['pincode']);
+    unset($_SESSION['id']);
+  	session_destroy();
+    
+  	header("location: ../Front_end/landing.html");
+  }
+
+
+  
+
+
+?>
 <!-- --------------------------------------------------------------------------
   
 
