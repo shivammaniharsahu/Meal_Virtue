@@ -1,12 +1,16 @@
 # Food-Filler 
 
+Link for the Presentation- https://drive.google.com/file/d/1ioDceANvLVUy0mUqqyPx8-K0aFYczMr4/view?usp=sharing
+
+Link for the Video- https://drive.google.com/file/d/1t1VNfS26kn37taGvv5xwAqSWxbJDR47B/view?usp=sharing
+
 SERVICE TO MANKIND IS SERVICE TO GOD!! DON'T WASTE WHAT IS EDIBLE, DONATE!
 
 An initiative for the the people who need food and can't afford it. We provide a plateform for the people who want to donate leftover food so that these food can reach to needy person and we can stop food wastage. Food donation is the utmost service of love and care you can show for the poor and needy. Our idea here is to present an web portal for online food donation where you can donate food without any hassle or issues. 
 
 The website serves the functionality at two ends- at the end of the user, the user can donate, gain points and also look at what he has donated and has it reached the people required. On the other end, the NGOs can register themselves on our portal and can collect food from users and can serve the mankind as they already are doing. This is one of the first web portal where in everyone can track, donate and also get rewarded based on donations. The user will be able to get the NGO working nearby them, so they can be contacted for any issues.
 
-We are currently working as a team Food-Filler and try to helping community so that they can servive.
+We are currently working as a team Food-Filler and try to help community so that no one sleep empty stomach.
 
 ## Screenshot of website
 
@@ -67,15 +71,15 @@ We are currently working as a team Food-Filler and try to helping community so t
 7. Contact Us
    * If any issue occure to any donar or NGO he can direcly submit his/her query to our team.
    * Can find other info related to food-filler.   
-6. REGISTER ORGANISATION
+8. REGISTER ORGANISATION
    * Here an NGO can register itself.
-   * Working on this page  
-8. Testimonial-Listen from users
-   > * Pending work
+   * Get a list of NGO currently registered on website 
+9. Testimonial-Listen from users
+   >
    >> * A donar can only submit testimonial only when he will be logged in.
    >> * A person who in not logged in, can see testimonials written by, written date.
    >> * Donar can give/write testimonial and it will be get published on portal in real time.   
-9. :arrow_forward::arrow_forward::arrow_forward:Many more soon...   
+10. :arrow_forward::arrow_forward::arrow_forward:Many more soon...   
 
 ---
 
@@ -112,6 +116,8 @@ We are currently working as a team Food-Filler and try to helping community so t
      ``` bash
          Paste here cloned project(Unzipped File) 
      ```
+*  Import SQL file into phpMyAdmin (registration.sql)
+
 *  Run XAMPP server by opening XAMPP application
      ``` bash
          Run Apache molule.
@@ -119,7 +125,7 @@ We are currently working as a team Food-Filler and try to helping community so t
      ```     
 *  Run the project on local server by this link
      ``` bash
-         http://localhost/Food-Filler/Front_end/about-us.html
+         http://localhost/Food-Filler/Front_end/landing.php
      ```  
 *  Hurrey! 😎, Our project running on localhost  
 
