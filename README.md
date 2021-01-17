@@ -59,14 +59,22 @@ We are currently working as a team Food-Filler and try to helping community so t
        
        
    * Here if user is login then he can directly donate food or money to his neareset choosed NGO's.
+6. Testimonial-Leader Board
+   * One of the most important page of website, it presents
+     * > Represent the top 3 donars with their informations
+     * > List of top 10 donars along with their earned points
+   * A person can get motivote for the donation.
+7. Contact Us
+   * If any issue occure to any donar or NGO he can direcly submit his/her query to our team.
+   * Can find other info related to food-filler.   
 6. REGISTER ORGANISATION
    * Here an NGO can register itself.
-   * Working on this page
-  
-7. Our Leader Board
    * Working on this page  
-8. Listen from users
-   * Pending
+8. Testimonial-Listen from users
+   > * Pending work
+   >> * A donar can only submit testimonial only when he will be logged in.
+   >> * A person who in not logged in, can see testimonials written by, written date.
+   >> * Donar can give/write testimonial and it will be get published on portal in real time.   
 9. :arrow_forward::arrow_forward::arrow_forward:Many more soon...   
 
 ---
@@ -117,9 +125,9 @@ We are currently working as a team Food-Filler and try to helping community so t
 
 ## Php MyAdmin
 
-*  For the security issue we are not providing sql queries of Php Myadmin.
+*  Added food-filler DB, where we can find created db in our project.
 
-## Backbones of project(Contributer)
+## Backbones of project(Contributors)
 
 >| S.No.         | Name                  | Work Field                                   | Github Account                            |
 >| ------------- |:---------------------:|:--------------------------------------------:|:-----------------------------------------:| 
