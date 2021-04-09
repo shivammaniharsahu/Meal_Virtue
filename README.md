@@ -17,7 +17,6 @@ We are currently working as a team and try to help community so that no one slee
 
 ## Screenshot  
 
-![GitHub Logo](markdown-demo/pic.jpeg)
  
 
 ## Features
@@ -57,7 +56,7 @@ We are currently working as a team and try to help community so that no one slee
        >> *  &emsp; a) He can see calorific values of all the food he has registered
        >> *  &emsp; b) if any food it near to expire he will be notified and ask if he can use it or better to donate
        >> *  &emsp; c) If he want to donate, just click donate button in front of food item, and this food will be donated to his selected NGO.    
-       >> * ![GitHub Logo](markdown-demo/profile_donar.png)   
+       
     * > NGO
        >> * If DONAR is login, redirect to NGO profile page
        >> * If not login redirect to login page
@@ -68,7 +67,7 @@ We are currently working as a team and try to help community so that no one slee
        >> * Containing all the registered NGO's by owner with registration date, profile image, name etc.  
        >> * NGO owner can register his NGO by submitting form register NGO on profile page of NGO.
        >> * After submitting form he can see his status of registration on his profile page.   
-       >> * ![GitHub Logo](markdown-demo/ngo.png)   
+    
     * > ADMIN
        >> * After login, redirect to ADMINprofile page  
        >> * After verification of NGO which is submitted by NGO owner ADMIN will publish this NGO to portal, which will be displayed on registered NGO.   
@@ -132,7 +131,7 @@ We are currently working as a team and try to help community so that no one slee
 *  Download the zip file or clone this repo using following command
    
      ``` bash
-         git clone https://github.com/AJAYKR00KJ/Hackmaniacs.git
+         git clone 
      ```
 *  Install XAMPP to run server by this link
      ``` bash
@@ -167,8 +166,6 @@ We are currently working as a team and try to help community so that no one slee
 >| ------------- |:---------------------:|:--------------------------------------------:|:-----------------------------------------:| 
 >| 1             | Shivam Manihar Sahu   | Manage Databases- Worked on sql queries      |  https://github.com/shivammaniharsahu/    |
 >| 2             | Shashwat Awasthi      | UI/UX design of Website, Worked on frontend  |  https://github.com/ShashwatAwasthi04     |
-        |
-
 ---
      
      
