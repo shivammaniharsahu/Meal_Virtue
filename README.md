@@ -1,89 +1,115 @@
-# Food-Filler 
+### Go to website: https://meal-virtue.herokuapp.com/templates/landing.php
+
+# Meal-Virtue
+
+Virtue generally means an act of high moral values and helping others. And what could be a better feeling than feeding people who are unprevildeged and are barely even able to afford a day's meal. Meal-Virtue is an online web portal which helps you carry out a hassle free donation process. You can donate, register your NGO, get the nutritional value of your food and get awarded for it. Donation are carried out less in number, as people do not find the right NGO for donation, and NGO search for people who want to donate. The platform links them both. SERVICE TO MANKIND IS SERVICE TO GOD!! DON'T WASTE WHAT IS EDIBLE, DONATE!  
 
 ##  Link for the Presentation- 
-   > https://drive.google.com/file/d/1ioDceANvLVUy0mUqqyPx8-K0aFYczMr4/view?usp=sharing
+   >   http://bit.ly/3cOxRJt
 
 ##  Link for the Video- 
-   > https://drive.google.com/file/d/1t1VNfS26kn37taGvv5xwAqSWxbJDR47B/view?usp=sharing
+   >   https://youtu.be/Yd_0JrKLVHg
 
 SERVICE TO MANKIND IS SERVICE TO GOD!! DON'T WASTE WHAT IS EDIBLE, DONATE!
+ 
 
-An initiative for the the people who need food and can't afford it. We provide a plateform for the people who want to donate leftover food so that these food can reach to needy person and we can stop food wastage. Food donation is the utmost service of love and care you can show for the poor and needy. Our idea here is to present an web portal for online food donation where you can donate food without any hassle or issues. 
+We are currently working as a team and try to help community so that no one sleep empty stomach.
 
-The website serves the functionality at two ends- at the end of the user, the user can donate, gain points and also look at what he has donated and has it reached the people required. On the other end, the NGOs can register themselves on our portal and can collect food from users and can serve the mankind as they already are doing. This is one of the first web portal where in everyone can track, donate and also get rewarded based on donations. The user will be able to get the NGO working nearby them, so they can be contacted for any issues.
+## Screenshot  
 
-We are currently working as a team Food-Filler and try to help community so that no one sleep empty stomach.
-
-## Screenshot of website
-
-![GitHub Logo](markdown-demo/home.png)
+![GitHub Logo](markdown-demo/pic.jpeg)
  
 
 ## Features
 
-1. Responsive and User friendly UI
-2. Home page of Food Filler 
-   * Useful links
-   * Info about website.
-   * Link to donate food
-   * Link for login to personal account
+1. Responsive and User friendly UI, easy to use.
+2. Home page of Food-Virtue 
+   * Information about Food-Virtue.
+   * Chat-bot to explore website in a better way.
    * SAVIOUR STORIES
    * Navbar containing Importent links to redirect to other pages.
+   * Sponsors, who will economically support us.
 3. About Page
-   * Containing what functionalities we are providing
-   * Number of events covered and donations.
-4. Profile Page
-   * One of the most functionality covered page.
-   * > Profile Page
-       >> * If user is login, redirect to profile page
+   * Containing all functionalities we are providing on our plateform
+   * Total Number of events covered and donations.
+4. Profile
+   * > This section contain mainly 3 roles. 
+       >> a) DONAR
+       >> b) NGO OWNER
+       >> c) ADMIN
+   * > DONAR
+       >> * If DONAR is login, redirect to donar profile page
        >> * If not login redirect to login page
        >> * If not registered yet, by clicking register button from login, redirect to register button.
-   * Containing all profile information like name, mail, dob,email, address, contact etc. 
-   * > Sidebar of profile page Conating 
-       >> * total food donated
-       >> * total money donated
-       >> * Donated Items.
-       >> * Earned total points for donated food
-   * > Containing maximum 3 recent activity performed by user/doner
-       >> * Date of donation
-       >> * On which event he had donated food/money
-       >> * Money donated
-       >> * Total points earned for particular donation.
-   * :grinning: Yeah! He can earn vouchers after a specific earned points which he can reedem on any nearby restaurants by clicking reedem button.   
-   
-   * ![GitHub Logo](markdown-demo/profile.png)   
+       >> * DONAR profile page containing all profile information like name, mail, dob,email, address, contact etc.
+       >> * Sidebar of profile page Containing 
+       >> *  &emsp; a) total food donated
+       >> *  &emsp; b) total money donated
+       >> *  &emsp; c) Donated Items.
+       >> *  &emsp; d) Earned total points for donated food
+       >> * Containing maximum 3 recent activity performed by user/doner
+       >> *  &emsp; a) Date of donation
+       >> *  &emsp; b) On which event he had donated food/money
+       >> *  &emsp; c) Money donated
+       >> *  &emsp; d) Total points earned for particular donation.
+       >> * :grinning: Yeah! He can earn vouchers after a specific earned points which he can reedem on any nearby restaurants by clicking reedem button. 
+       >> * DONAR can save his food by registering all food items he has purchased yet.
+       >> *  &emsp; a) He can see calorific values of all the food he has registered
+       >> *  &emsp; b) if any food it near to expire he will be notified and ask if he can use it or better to donate
+       >> *  &emsp; c) If he want to donate, just click donate button in front of food item, and this food will be donated to his selected NGO.    
+       >> * ![GitHub Logo](markdown-demo/profile_donar.png)   
+    * > NGO
+       >> * If DONAR is login, redirect to NGO profile page
+       >> * If not login redirect to login page
+       >> * If not registered yet, by clicking register button from login, redirect to register button.
+       >> * NGO profile page containing all profile information like name, mail, dob,email, address, contact etc of NGO owner.
+       >> * Sidebar of NGO page Containing 
+       >> *  &emsp; a) Total number of NGO registered by NGO owner. 
+       >> * Containing all the registered NGO's by owner with registration date, profile image, name etc.  
+       >> * NGO owner can register his NGO by submitting form register NGO on profile page of NGO.
+       >> * After submitting form he can see his status of registration on his profile page.   
+       >> * ![GitHub Logo](markdown-demo/ngo.png)   
+    * > ADMIN
+       >> * After login, redirect to ADMINprofile page  
+       >> * After verification of NGO which is submitted by NGO owner ADMIN will publish this NGO to portal, which will be displayed on registered NGO.   
 5. DONATE LEFTOVERS FROM EVENT
-   * This page is accessable only when user/doner is logged in.
-   * > Here user/doner can donate  
+   * This page is accessable only when doner is logged in.
+   * This page contain google map, which will show all nearby NGO's so that donar can donate nearby NGO's.
+   * > Here doner can donate  
        >> 1. Leftover food from any events or any food items.
        >> 2. Donar can donate money directly to his selected NGO's.
    * > After donate donar can will be redirected to profile page and he will find 
        >> * List of all NGO's which are registered in his own city.
        >> * Doner will select the NGO for his/her donated food, after select.
        >>> * Donar will get notification to his registered mail that particular NGO will collect the food.
-       >>> * Select NGO will received notification for all the information of donar and donated items to receive donated items.
-       
-       
-   * Here if user is login then he can directly donate food or money to his neareset choosed NGO's.
-6. Testimonial-Leader Board
-   * One of the most important page of website, it presents
-     * > Represent the top 3 donars with their informations
-     * > List of top 10 donars along with their earned points
-   * A person can get motivote for the donation.
+       >>> * Select NGO will received notification for all the information of donar and donated items to receive donated items. 
+6. REGISTERED ORGANISATION
+   * Here all the registered NGO's will be displayed after verification.
+   * It will also show the status of NGO wheather it is active or not active at current time.
+   * Google map containing all the nearby NGO's.  
+6. Testimonial 
+    * > This section contain mainly 3 parts. 
+       >> a) Leaderboard
+       >> b) Listen form Users
+       >> c) Thank you page
+   * > Leaderboard
+       >> * Represent the top 3 donars with their informations
+       >> * List of top 10 donars along with their earned points
+       >> * This page acts as a motivation.   
+    * > Listen form Users
+       >> * Here a donar or any registered user can write testimonial.
+       >> * All the previousely written testimonial can be seen on this page.   
+    * > Thank you page
+       >> * This is one of the most important page. 
+       >> * Contain all the events images where we are serving from the food of donars.
+       >> * Here all the images will contain name of donar of food item and donation date, so that any donar can see where his food is actually going.
 7. Contact Us
-   * If any issue occure to any donar or NGO he can direcly submit his/her query to our team.
-   * Can find other info related to food-filler.   
-8. REGISTER ORGANISATION
-   * Here an NGO can register itself.
-   * Get a list of NGO currently registered on website 
-9. Testimonial-Listen from users
-   >
-   >> * A donar can only submit testimonial only when he will be logged in.
-   >> * A person who in not logged in, can see testimonials written by, written date.
-   >> * Donar can give/write testimonial and it will be get published on portal in real time.   
+   * If any issue occure to any donar or NGO he can directly submit his/her query to our team.
+   * Can find other info related to food-filler.     
 
 ---
-
+## Website Pic
+![GitHub Logo](markdown-demo/home.png)
 ## Technology stacks used in project: Web Technology
 *  Frontend
    * HTML
@@ -106,7 +132,7 @@ We are currently working as a team Food-Filler and try to help community so that
 *  Download the zip file or clone this repo using following command
    
      ``` bash
-         git clone https://github.com/shivammaniharsahu/Food-Filler.git
+         git clone https://github.com/AJAYKR00KJ/Hackmaniacs.git
      ```
 *  Install XAMPP to run server by this link
      ``` bash
@@ -126,13 +152,14 @@ We are currently working as a team Food-Filler and try to help community so that
      ```     
 *  Run the project on local server by this link
      ``` bash
-         http://localhost/Food-Filler/Front_end/landing.php
+         http://localhost/templates/landing.php
      ```  
 *  Hurrey! 😎, Our project running on localhost  
 
 ## Php MyAdmin
 
-*  Added food-filler DB, where we can find created db in our project.
+*  Added food_filler_db database, where we can find created db in our project.
+
 
 ## Backbones of project(Contributors)
 
@@ -140,8 +167,7 @@ We are currently working as a team Food-Filler and try to help community so that
 >| ------------- |:---------------------:|:--------------------------------------------:|:-----------------------------------------:| 
 >| 1             | Shivam Manihar Sahu   | Manage Databases- Worked on sql queries      |  https://github.com/shivammaniharsahu/    |
 >| 2             | Shashwat Awasthi      | UI/UX design of Website, Worked on frontend  |  https://github.com/ShashwatAwasthi04     |
->| 3             | Rahul Singh Kushawaha | Worked on frontend of project,database work  |  https://github.com/Rahul-skush           | 
->| 4             | Ajay Kumar            | Worked on PHP backend, Query Processing      |  https://github.com/AJAYKR00KJ            |
+        |
 
 ---
      
