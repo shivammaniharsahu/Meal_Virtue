@@ -131,7 +131,7 @@ We are currently working as a team and try to help community so that no one slee
 *  Download the zip file or clone this repo using following command
    
      ``` bash
-         git clone 
+         git clone https://github.com/shivammaniharsahu/Meal_Virtue.git
      ```
 *  Install XAMPP to run server by this link
      ``` bash
