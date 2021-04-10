@@ -120,6 +120,8 @@ We are currently working as a team and try to help community so that no one slee
    * Github
    * Php
    * Php MyAdmin
+   * Landbot
+   * Google Map Api's
 *  Backend
    * Apache Server
    * MySql
